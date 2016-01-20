@@ -1,0 +1,35 @@
+package VolcanoRobot;
+
+public class Test2 extends TestFinalMethod { 
+    
+	public void f1(){     
+	    System.out.println("Test1父类方法f1被覆盖!"); 
+	} 
+	public void f3(){
+		System.out.println("test2 can override the father's Method");
+	}
+	
+
+	
+public static void main(String[] args) { 
+    // TODO 自动生成方法存根 
+	TestFinalMethod t1 = new TestFinalMethod();
+	t1.f1();
+	t1.f2();
+	t1.f3();
+	Test2 t2 = new Test2();
+	t2.f1();
+	t2.f2();
+	t2.f3();
+	String s1 = new String("str");
+	String s2 = new String("str");
+	System.out.println("== compare:" + (s1 ==s2));
+	System.out.println("equal compare:" + s1.equals(s2));
+	
+	String s3 = "str";
+	String s4 = "str";
+	System.out.println("== compare:" + (s3 ==s4));
+	System.out.println("equal compare:" + s3.equals(s4));
+	
+} 
+}

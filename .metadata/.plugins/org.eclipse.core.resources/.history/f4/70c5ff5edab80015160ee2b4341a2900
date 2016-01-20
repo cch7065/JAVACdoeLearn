@@ -1,0 +1,28 @@
+package VolcanoRobot;
+
+public class PrimeThreads {
+	public static void mian(String[] arguments){
+		PrimeThreads pt = new PrimeThreads(arguments);
+	}
+	
+	public PrimeThreads(String[] arguments){
+		PrimeFinder[] finder = new PrimeFinder[arguments.length];
+		for(int i=0 ; i<arguments.length; i++){
+			try{
+				long count = Long.parseLong(arguments[i]);
+				finder[i] = new PrimeFinder(count);
+				System.out.println("Looking for prime "+count);
+			}catch(NumberFormatException nfe){
+				System.out.println("Error: " + nfe.getMessage());
+			}
+		}
+		boolean complete = false;
+		while(!complete){
+			complete = true ;
+			
+		}
+	}
+	
+	
+
+}

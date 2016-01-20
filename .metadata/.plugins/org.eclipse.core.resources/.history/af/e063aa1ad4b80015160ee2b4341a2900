@@ -1,0 +1,39 @@
+package VolcanoRobot;
+
+public class PrimeFinder implements Runnabel {
+	public long target;
+	public long prime;
+	public boolean finished = false;
+	private Thread runner;
+	
+	PrimeFinder(long intarget){
+		 target = intarget;
+		 if (runner == null){
+			 runner = new Thread(this);
+			 runner.start();
+		 }
+		
+	}
+	
+	public void run(){
+		long primeCount = 0;
+		long candidate = 2;
+		while(primeCount < target){
+			if(isPrime(candidate)){
+				primeCount++;
+			}
+			candidate++;
+		}
+		finished = true;
+	}
+	
+	public Boolean isPrime(long checkNum){
+		double root = Math.sqrt(checkNum);
+		for(int i=0;i<root;i++){
+			if(checkNum % i == 0)
+				return false;
+		}
+		return true;
+	}
+
+}

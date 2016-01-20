@@ -79,7 +79,12 @@ public class EqualsTester {
 			}
 		
 		System.out.println("break label practice");//break out 的话就直接跳到这层循环了
+	
+		
+		int cc=Integer.parseInt("42");  // paraseInt():change the string "42" to  integer 
+		
 	} 
+	
 	
 	
 	
